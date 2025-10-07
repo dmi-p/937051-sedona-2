@@ -7,12 +7,10 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
+        <a href="/index.html" class="navigation-link">
+          <span class="visually-hidden">Логотип Sedona</span>
+        </a>
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <a href="/index.html" class="navigation-link">
-              <span class="visually-hidden">Логотип Sedona</span>
-            </a>
-          </li>
           <li class="navigation-item">
             <a href="/index.html" class="navigation-link"> Главная </a>
           </li>
@@ -23,29 +21,20 @@
             <a href="#" class="navigation-link"> Гостиницы </a>
           </li>
         </ul>
-
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">
-              <span class="visually-hidden">Поиск</span>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">
-              <span class="visually-hidden">Понравившиеся</span>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a href="" class="navigation-link button navigation-button-booking">
-              Хочу сюда!
-            </a>
-          </li>
-        </ul>
+        <a href="#" class="navigation-link">
+          <span class="visually-hidden">Поиск</span>
+        </a>
+        <a href="#" class="navigation-link">
+          <span class="visually-hidden">Понравившиеся</span>
+        </a>
+        <a href="" class="navigation-link button navigation-button-booking">
+          Хочу сюда!
+        </a>
       </nav>
     </header>
 
     <main>
-      <header class="inner-header">
+      <section class="filters">
         <h1>Гостиницы Седоны</h1>
         <ul class="breadcrubms">
           <li class="breadcrubms-item">
@@ -55,8 +44,6 @@
             <a class="breadcrubms-link" href="#">Гостиницы</a>
           </li>
         </ul>
-      </header>
-      <section class="filters">
         <h2 class="visually-hidden">Фильтры гостиниц</h2>
         <form
           class="catalog-filter"
@@ -253,55 +240,47 @@
           </li>
         </ul>
       </section>
-    </main>
-
-    <footer>
-      <section class="footer-subscribe">
+      <section class="subscribe">
         <h2 class="title">Подпишитесь на рассылку</h2>
         <p>
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form action="https://echo.htmlacademy.ru/" method="post">
-          <label for="footer-subscribe-email">Email</label>
+          <label for="subscribe-email">Email</label>
           <input
             class="field"
             placeholder="Ваш e-mail"
             type="email"
-            name="footer-subscribe-email"
-            id="footer-subscribe-email"
+            name="subscribe-email"
+            id="subscribe-email"
             required
           />
-          <button class="button footer-subscribe-button" type="submit">
+          <button class="button subscribe-button" type="submit">
             Подписаться
           </button>
         </form>
       </section>
+    </main>
+
+    <footer>
       <section class="footer-contacts">
-        <ul class="footer-contacts-list">
-          <li class="footer-contacts-item">
-            <ul class="footer-contacts-socials">
-              <li class="footer-contacts-socials-item">
-                <a href="https://vk.com/htmlacademy">ВКонтакте</a>
-              </li>
-              <li class="footer-contacts-socials-item">
-                <a href="https://t.me/htmlacademy">Telegram</a>
-              </li>
-              <li class="footer-contacts-socials-item">
-                <a href="https://www.youtube.com/user/htmlacademyru">YouTube</a>
-              </li>
-            </ul>
+        <ul class="footer-contacts-socials">
+          <li class="footer-contacts-socials-item">
+            <a href="https://vk.com/htmlacademy">ВКонтакте</a>
           </li>
-          <li class="footer-contacts-item">
-            <p class="footer-contacts-phone">
-              <a href="tel:+78121212">+7 (812) 812-12-12</a>
-            </p>
+          <li class="footer-contacts-socials-item">
+            <a href="https://t.me/htmlacademy">Telegram</a>
           </li>
-          <li class="footer-contacts-item">
-            <a href="https://htmlacademy.ru/intensive/htmlcss"
-              >Логотип HTML Academy</a
-            >
+          <li class="footer-contacts-socials-item">
+            <a href="https://www.youtube.com/user/htmlacademyru">YouTube</a>
           </li>
         </ul>
+        <p class="footer-contacts-phone">
+          <a href="tel:+78121212">+7 (812) 812-12-12</a>
+        </p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          Логотип HTML Academy
+        </a>
       </section>
     </footer>
 
