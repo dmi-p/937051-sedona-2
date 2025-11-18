@@ -622,9 +622,8 @@ p {
   padding: 0;
   padding-bottom: 40px;
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
   align-items: center;
 }
@@ -635,7 +634,6 @@ p {
   box-shadow: 0 0 0 1px #e5e5e5;
   border-radius: 4px;
   display: flex;
-  flex-basis: calc((100% - 40px) / 3);
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
