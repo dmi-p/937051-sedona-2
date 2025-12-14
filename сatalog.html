@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
   <body>
     <div class="container">
@@ -49,7 +50,11 @@
               />
             </svg>
           </a>
-          <a href="#" class="navigation-link icon navigation-link-favorites">
+          <a
+            href="#"
+            class="navigation-link icon navigation-link-favorites"
+            data-favorites="12"
+          >
             <span class="visually-hidden">Понравившиеся</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -112,16 +117,42 @@
               <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <label for="pool" class="control">Бассейн</label>
-                  <input type="checkbox" id="pool" name="pool" checked />
+                  <input
+                    type="checkbox"
+                    id="pool"
+                    class="visually-hidden"
+                    name="pool"
+                    checked
+                  />
+                  <label for="pool" class="control">
+                    <span class="control-mark"></span>
+                    Бассейн
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label for="parking" class="control">Парковка</label>
-                  <input type="checkbox" id="parking" name="parking" checked />
+                  <input
+                    type="checkbox"
+                    id="parking"
+                    class="visually-hidden"
+                    name="parking"
+                    checked
+                  />
+                  <label for="parking" class="control">
+                    <span class="control-mark"></span>
+                    Парковка
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label for="wi-fi" class="control">Wi-Fi</label>
-                  <input type="checkbox" id="wi-fi" name="wi-fi" />
+                  <input
+                    type="checkbox"
+                    id="wi-fi"
+                    class="visually-hidden"
+                    name="wi-fi"
+                  />
+                  <label for="wi-fi" class="control">
+                    <span class="control-mark"></span>
+                    Wi-Fi
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -129,76 +160,82 @@
               <legend class="catalog-filter-title">Тип Жилья:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <label class="control" for="hotel-group">Гостиница</label>
                   <input
                     type="radio"
                     id="hotel"
                     name="hotel-group"
                     value="hotel"
+                    class="visually-hidden"
                     checked
                   />
+                  <label class="control" for="hotel">
+                    <span class="radio-mark"></span>
+                    Гостиница</label
+                  >
                 </li>
                 <li class="catalog-filter-item">
-                  <label for="motel" class="control">Мотель</label>
                   <input
                     type="radio"
                     id="motel"
                     name="hotel-group"
                     value="motel"
+                    class="visually-hidden"
                   />
+                  <label for="motel" class="control">
+                    <span class="radio-mark"></span>
+                    Мотель</label
+                  >
                 </li>
                 <li class="catalog-filter-item">
-                  <label for="apartments" class="control">Апартаменты</label>
                   <input
                     type="radio"
                     id="apartments"
                     name="hotel-group"
                     value="apartments"
+                    class="visually-hidden"
                   />
+                  <label for="apartments" class="control">
+                    <span class="radio-mark"></span>
+                    Апартаменты</label
+                  >
                 </li>
               </ul>
             </fieldset>
             <fieldset class="catalog-filter-group catalog-filter-group-price">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <div class="price-inputs">
-                <input
-                  type="number"
-                  class="price-inputs-from"
-                  name="price-min"
-                  id="price-min"
-                  placeholder="От"
-                  value="0"
-                />
-                <input
-                  type="number"
-                  class="price-inputs-to"
-                  name="price-max"
-                  id="price-max"
-                  placeholder="До"
-                  value="9000"
-                />
+                <label class="price-input-label price-input-label-from">
+                  <input
+                    type="number"
+                    class="price-input-from price-input"
+                    name="price-min"
+                    id="price-min"
+                    value="0"
+                  />
+                </label>
+                <label class="price-input-label price-input-label-to">
+                  <input
+                    type="number"
+                    class="price-input-to price-input"
+                    name="price-max"
+                    id="price-max"
+                    value="9000"
+                  />
+                </label>
               </div>
-              <div class="price-slider">
-                <label for="slider min"></label>
-                <input
-                  type="range"
-                  name="slider-min"
-                  id="slider-min"
-                  min="0"
-                  max="12000"
-                  step="1"
-                  value="0"
-                />
-                <label for="slider-max"></label>
-                <input
-                  type="range"
-                  name="slider-max"
-                  id="slider-max"
-                  min="0"
-                  max="12000"
-                  step="1"
-                  value="9000"
-                />
+              <div class="range-scale">
+                <div class="range-bar" style="left: 0; width: 226px">
+                  <button class="range-toggle toggle-min">
+                    <span class="visually-hidden"
+                      >Изменить минимальную цену</span
+                    >
+                  </button>
+                  <button class="range-toggle toggle-max">
+                    <span class="visually-hidden"
+                      >Изменить максимальную цену</span
+                    >
+                  </button>
+                </div>
               </div>
             </fieldset>
 
@@ -223,7 +260,10 @@
               <option value="popular">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-            <a href="#" class="view-icon view-icon-current">
+            <a
+              href="catalog.html?view=tile"
+              class="view-icon view-icon-current"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -240,7 +280,7 @@
               </svg>
               <span class="visually-hidden">Показать таблицей</span>
             </a>
-            <a href="#" class="view-icon">
+            <a href="catalog.html?view=card" class="view-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -254,7 +294,7 @@
               </svg>
               <span class="visually-hidden">Показать слайдами</span>
             </a>
-            <a href="#" class="view-icon">
+            <a href="catalog.html?view=list" class="view-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
