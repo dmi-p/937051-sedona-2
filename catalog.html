@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
     <div class="container">
@@ -33,7 +34,7 @@
               </a>
             </li>
           </ul>
-          <a href="#" class="navigation-link icon">
+          <a href="#" class="navigation-link icon navigation-link-search">
             <span class="visually-hidden">Поиск</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -260,57 +261,62 @@
               <option value="popular">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-            <a
-              href="catalog.html?view=tile"
-              class="view-icon view-icon-current"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="14"
-                fill="none"
-                aria-hidden="true"
-                focusable="false"
-                viewBox="0 0 16 14"
+            <div class="view-icon-list">
+              <a
+                href="catalog.html?view=tile"
+                class="view-icon view-icon-current"
               >
-                <path
-                  fill="#000"
-                  d="M4 0H0v6h4zM16 0h-4v6h4zM10 0H6v6h4zM4 8H0v6h4zM16 8h-4v6h4zM10 8H6v6h4z"
-                />
-              </svg>
-              <span class="visually-hidden">Показать таблицей</span>
-            </a>
-            <a href="catalog.html?view=card" class="view-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="14"
-                fill="none"
-                aria-hidden="true"
-                focusable="false"
-                viewBox="0 0 16 14"
-              >
-                <path fill="#000" d="M16 12H0v2h16zM14 2v6H2V2zm2-2H0v10h16z" />
-              </svg>
-              <span class="visually-hidden">Показать слайдами</span>
-            </a>
-            <a href="catalog.html?view=list" class="view-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="14"
-                fill="none"
-                aria-hidden="true"
-                focusable="false"
-                viewBox="0 0 16 14"
-              >
-                <path
-                  fill="#000"
-                  d="M2 0H0v2h2zM16 0H4v2h12zM2 4H0v2h2zM16 4H4v2h12zM2 8H0v2h2zM16 8H4v2h12zM2 12H0v2h2zM16 12H4v2h12z"
-                />
-              </svg>
-              <span class="visually-hidden">Показать списком</span>
-            </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="14"
+                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 16 14"
+                >
+                  <path
+                    fill="#000"
+                    d="M4 0H0v6h4zM16 0h-4v6h4zM10 0H6v6h4zM4 8H0v6h4zM16 8h-4v6h4zM10 8H6v6h4z"
+                  />
+                </svg>
+                <span class="visually-hidden">Показать таблицей</span>
+              </a>
+              <a href="catalog.html?view=card" class="view-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="14"
+                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 16 14"
+                >
+                  <path
+                    fill="#000"
+                    d="M16 12H0v2h16zM14 2v6H2V2zm2-2H0v10h16z"
+                  />
+                </svg>
+                <span class="visually-hidden">Показать слайдами</span>
+              </a>
+              <a href="catalog.html?view=list" class="view-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="14"
+                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 16 14"
+                >
+                  <path
+                    fill="#000"
+                    d="M2 0H0v2h2zM16 0H4v2h12zM2 4H0v2h2zM16 4H4v2h12zM2 8H0v2h2zM16 8H4v2h12zM2 12H0v2h2zM16 12H4v2h12z"
+                  />
+                </svg>
+                <span class="visually-hidden">Показать списком</span>
+              </a>
+            </div>
           </div>
 
           <ul class="hotels-list">
@@ -334,11 +340,11 @@
                 <button type="button" class="button button-additional">
                   В избранное
                 </button>
-                <div class="stars">
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
+                <div class="stars" aria-label="4 из 5 звёзд">
+                  <span class="star" aria-hidden="true"></span>
+                  <span class="star" aria-hidden="true"></span>
+                  <span class="star" aria-hidden="true"></span>
+                  <span class="star" aria-hidden="true"></span>
                 </div>
                 <span class="rating button">Рейтинг: 8,5</span>
               </div>
@@ -363,11 +369,11 @@
                 <button type="button" class="button button-chosen">
                   В избранном
                 </button>
-                <div class="stars">
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
+                <div class="stars" aria-label="4 из 5 звёзд">
+                  <span class="star" aria-hidden="true"></span>
+                  <span class="star" aria-hidden="true"></span>
+                  <span class="star" aria-hidden="true"></span>
+                  <span class="star" aria-hidden="true"></span>
                 </div>
                 <span class="rating button">Рейтинг: 9,2</span>
               </div>
@@ -392,10 +398,10 @@
                 <button type="button" class="button button-additional">
                   В избранное
                 </button>
-                <div class="stars">
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
+                <div class="stars" aria-label="3 из 5 звёзд">
+                  <span class="star" aria-hidden="true"></span>
+                  <span class="star" aria-hidden="true"></span>
+                  <span class="star" aria-hidden="true"></span>
                 </div>
                 <span class="rating button">Рейтинг: 6,9</span>
               </div>
@@ -420,9 +426,9 @@
                 <button type="button" class="button button-additional">
                   В избранное
                 </button>
-                <div class="stars">
-                  <span class="star"></span>
-                  <span class="star"></span>
+                <div class="stars" aria-label="2 из 5 звёзд">
+                  <span class="star" aria-hidden="true"></span>
+                  <span class="star" aria-hidden="true"></span>
                 </div>
                 <span class="button rating">Рейтинг: 5,0</span>
               </div>
@@ -545,7 +551,11 @@
               </a>
             </li>
           </ul>
-          <a class="contacts-phone" href="tel:+78121212">+7 (812) 812-12-12</a>
+          <div class="phones">
+            <a class="contacts-phone" href="tel:+78121212"
+              >+7 (812) 812-12-12</a
+            >
+          </div>
           <a
             href="https://htmlacademy.ru/intensive/htmlcss"
             class="contacts-company"
