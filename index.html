@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.ico" />
   </head>
   <body>
     <div class="container">
@@ -30,7 +30,7 @@
               <a href="#" class="navigation-link"> О Седоне </a>
             </li>
             <li class="navigation-item">
-              <a href="/сatalog.html" class="navigation-link"> Гостиницы </a>
+              <a href="catalog.html" class="navigation-link"> Гостиницы </a>
             </li>
           </ul>
           <a href="#" class="navigation-link icon">
@@ -113,7 +113,6 @@
                 width="800"
                 height="385"
                 alt="Улица города Седона"
-                class="advantages-item-img"
               />
             </li>
             <li class="advantages-item">
@@ -125,12 +124,12 @@
             <li class="advantages-item">
               <div class="advantages-item-text">
                 <h3 class="card-title">Красивая дорога</h3>
-                <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                <p>Ехать в Седону из Лас-Вегаса<br />совсем не скучно!</p>
               </div>
             </li>
             <li class="advantages-item">
               <div class="advantages-item-text">
-                <h3 class="card-title">Мало туристов</h3>
+                <h3 class="card-title">Мало<br />туристов</h3>
                 <p>Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
@@ -140,7 +139,6 @@
                 width="800"
                 height="385"
                 alt="Мост Дьявола"
-                class="advantages-item-img"
               />
               <div class="advantages-item-text">
                 <h3 class="card-title">Там есть<br />Мост Дьявола</h3>
@@ -149,7 +147,7 @@
             </li>
           </ul>
         </section>
-        <section class="services">
+        <section class="services" data-test="services">
           <div class="services-desc">
             <h2 class="visually-hidden">Услуги</h2>
             <b class="title"
@@ -223,6 +221,7 @@
 
       <footer data-test="footer" class="footer">
         <section class="contacts">
+          <h2 class="visually-hidden">Контакты</h2>
           <ul class="socials">
             <li class="socials-item">
               <a href="https://vk.com/htmlacademy" class="socials-link">
@@ -287,7 +286,11 @@
               </a>
             </li>
           </ul>
-          <a class="contacts-phone" href="tel:+78121212">+7 (812) 812-12-12</a>
+          <div class="phones">
+            <a class="contacts-phone" href="tel:+78121212"
+              >+7 (812) 812-12-12</a
+            >
+          </div>
           <a
             href="https://htmlacademy.ru/intensive/htmlcss"
             class="contacts-company"
@@ -402,35 +405,33 @@
               </div>
             </div>
             <div class="fieldset-guests-container">
-              <label for="children" class="modal-label"
-                >Дети:
-                <button type="button" class="tooltip">
-                  <span class="tooltip-icon-container">
-                    <svg
-                      class="icon"
-                      width="2"
-                      height="12"
-                      viewBox="0 0 2 12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z"
-                      />
-                    </svg>
-                  </span>
-
-                  <span
-                    class="children-tooltip-text"
-                    role="tooltip"
-                    id="tooltip-label-children"
-                    >Укажите количество детей, которые будут с вами, возраст
-                    которых от 6 до 18 лет. Дети до 6 лет размещаются
-                    бесплатно.</span
+              <label for="children" class="modal-label">Дети: </label>
+              <button type="button" class="tooltip">
+                <span class="tooltip-icon-container">
+                  <svg
+                    class="icon"
+                    width="2"
+                    height="12"
+                    viewBox="0 0 2 12"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                </button>
-              </label>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z"
+                    />
+                  </svg>
+                </span>
+
+                <span
+                  class="children-tooltip-text"
+                  role="tooltip"
+                  id="tooltip-label-children"
+                  >Укажите количество детей, которые будут с вами, возраст
+                  которых от 6 до 18 лет. Дети до 6 лет размещаются
+                  бесплатно.</span
+                >
+              </button>
               <div class="guests-count-container">
                 <button type="button" class="count-btn minus">
                   <span class="visually-hidden">Меньше</span>
