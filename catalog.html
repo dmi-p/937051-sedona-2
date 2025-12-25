@@ -11,11 +11,11 @@
     <div class="container">
       <header data-test="header" class="page-header">
         <nav class="navigation">
-          <a href="#" class="navigation-logo">
+          <a href="index.html" class="navigation-logo">
             <img
               src="images/optimized/logo.svg"
               width="140"
-              height="64"
+              height="70"
               alt="City of Sedona"
               class="logo-image"
             />
@@ -26,15 +26,16 @@
               <a href="index.html" class="navigation-link"> Главная </a>
             </li>
             <li class="navigation-item">
-              <a href="#" class="navigation-link"> О Седоне </a>
+              <a href="about.html" class="navigation-link"> О Седоне </a>
             </li>
             <li class="navigation-item">
-              <a href="#" class="navigation-link navigation-link-current">
-                Гостиницы
-              </a>
+              <a class="navigation-link navigation-link-current"> Гостиницы </a>
             </li>
           </ul>
-          <a href="#" class="navigation-link icon navigation-link-search">
+          <a
+            href="search.html"
+            class="navigation-link icon navigation-link-search"
+          >
             <span class="visually-hidden">Поиск</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +53,7 @@
             </svg>
           </a>
           <a
-            href="#"
+            href="favorites.html"
             class="navigation-link icon navigation-link-favorites"
             data-favorites="12"
           >
@@ -72,7 +73,7 @@
               />
             </svg>
           </a>
-          <a href="" class="navigation-link button"> Хочу сюда! </a>
+          <a href="booking.html" class="navigation-link button"> Хочу сюда! </a>
         </nav>
       </header>
 
@@ -336,7 +337,7 @@
                 <span>От 4000 ₽</span>
               </p>
               <div class="hotel-button-container">
-                <a class="button" href="#">Подробнее</a>
+                <a class="button" href="hotel.html?id=1">Подробнее</a>
                 <button type="button" class="button button-additional">
                   В избранное
                 </button>
@@ -365,7 +366,7 @@
                 <span>От 5000 ₽</span>
               </p>
               <div class="hotel-button-container">
-                <a class="button" href="#">Подробнее</a>
+                <a class="button" href="hotel.html?id=2">Подробнее</a>
                 <button type="button" class="button button-chosen">
                   В избранном
                 </button>
@@ -394,7 +395,7 @@
                 <span>От 2500 ₽</span>
               </p>
               <div class="hotel-button-container">
-                <a class="button" href="#">Подробнее</a>
+                <a class="button" href="hotel.html?id=3">Подробнее</a>
                 <button type="button" class="button button-additional">
                   В избранное
                 </button>
@@ -422,7 +423,7 @@
                 <span>От 1500 ₽</span>
               </p>
               <div class="hotel-button-container">
-                <a class="button" href="#">Подробнее</a>
+                <a class="button" href="hotel.html?id=4">Подробнее</a>
                 <button type="button" class="button button-additional">
                   В избранное
                 </button>
@@ -439,19 +440,27 @@
               <a class="button pagination-current">1</a>
             </li>
             <li class="pagination-item">
-              <a class="button button-additional" href="#">2</a>
+              <a class="button button-additional" href="catalog.html?page=2"
+                >2</a
+              >
             </li>
             <li class="pagination-item">
-              <a class="button button-additional" href="#">3</a>
+              <a class="button button-additional" href="catalog.html?page=3"
+                >3</a
+              >
             </li>
             <li class="pagination-item">
-              <a class="button button-additional" href="#">4</a>
+              <a class="button button-additional" href="catalog.html?page=4"
+                >4</a
+              >
             </li>
             <li class="pagination-item pagination-others">
               <span class="button">...</span>
             </li>
             <li class="pagination-item">
-              <a class="button button-additional" href="#">10</a>
+              <a class="button button-additional" href="catalog.html?page=10"
+                >10</a
+              >
             </li>
           </ul>
         </section>
@@ -468,7 +477,7 @@
             method="post"
             class="subscribe-form"
           >
-            <label for="subscribe-email"></label>
+            <label for="subscribe-email" class="visually-hidden">Email</label>
             <input
               class="subscribe-field"
               placeholder="Ваш e-mail"
@@ -552,7 +561,7 @@
             </li>
           </ul>
           <div class="phones">
-            <a class="contacts-phone" href="tel:+78121212"
+            <a class="contacts-phone" href="tel:+78128121212"
               >+7 (812) 812-12-12</a
             >
           </div>
